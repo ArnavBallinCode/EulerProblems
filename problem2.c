@@ -1,32 +1,23 @@
 #include <stdio.h>
-int main(void)
+
+int main() 
 {
-    // initialising  the first and second terms 
-    int t1 = 0 , t2 = 1;
+    int a = 1, b = 2;
+    int sum_even = 0;
 
-    // initialise the next term t3
-    int t3 = t2 + t1;
+    // Loop to generate Fibonacci sequence until the term exceeds 4 million
+    while (a <= 4000000) 
+    {
+        if (a % 2 == 0) {
+            sum_even = sum_even + a;
+        }
+        // Move to the next term
+        int next = a + b;
+        a = b;
+        b = next;
+    }
 
-    // get number of terms from user 
-    int n;
-    printf("Enter the number of terms you want ");
-    scanf("%d", &n);
+    printf("The sum of the even-valued terms is: %d\n", sum_even);
 
-    //print first 2 terms 
-    printf("%d %d " , t1 , t2 );
-
-    // print 3rd to nth terms
-    int i , t ;
-
-  for ( i = 3; i <=n ; i++)
-
-  {
-    t = t1 + t2;
-
-    printf("%d " , t );
-
-    t1 = t2;
-    t2 = t;
-  
-  }
+    return 0;
 }
