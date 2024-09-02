@@ -8,7 +8,8 @@ int main()
     // Loop to generate Fibonacci sequence until the term exceeds 4 million
     while (a <= 4000000) 
     {
-        if (a % 2 == 0) {
+        if (a % 2 == 0) 
+        {
             sum_even = sum_even + a;
         }
         // Move to the next term
